@@ -145,7 +145,7 @@ export const ResultsTableData: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="bg-white shadow sm:rounded-lg p-6">
+      <div className="bg-white dark:bg-gray-800 shadow sm:rounded-lg p-6">
         <div className="flex justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
         </div>
@@ -155,8 +155,8 @@ export const ResultsTableData: React.FC = () => {
 
   if (error) {
     return (
-      <div className="bg-white shadow sm:rounded-lg p-6">
-        <div className="text-red-500 text-center">{error}</div>
+      <div className="bg-white dark:bg-gray-800 shadow sm:rounded-lg p-6">
+        <div className="text-red-500 dark:text-red-400 text-center">{error}</div>
       </div>
     );
   }
@@ -164,10 +164,10 @@ export const ResultsTableData: React.FC = () => {
   // Empty state handler
   if (data.length === 0) {
     return (
-      <div className="bg-white shadow sm:rounded-lg p-12">
+      <div className="bg-white dark:bg-gray-800 shadow sm:rounded-lg p-12">
         <div className="text-center">
           <svg 
-            className="mx-auto h-12 w-12 text-gray-400" 
+            className="mx-auto h-12 w-12 text-gray-400 dark:text-gray-500" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor" 
@@ -180,8 +180,8 @@ export const ResultsTableData: React.FC = () => {
               d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M12 14h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
             />
           </svg>
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No hotels found</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-gray-100">No hotels found</h3>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
             The results file is empty or contains no hotel data.
           </p>
         </div>
@@ -199,16 +199,16 @@ export const ResultsTableData: React.FC = () => {
         />
       )}
       
-      <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+      <div className="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg">
         {/* Search bar */}
-        <div className="p-4 border-b border-gray-200">
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700">
           <div className="relative rounded-md shadow-sm">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-gray-400" />
+              <Search className="h-4 w-4 text-gray-400 dark:text-gray-500" />
             </div>
             <input
               type="text"
-              className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md p-2 border"
+              className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 dark:border-gray-600 rounded-md p-2 border bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
               placeholder="Search hotels..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -217,18 +217,18 @@ export const ResultsTableData: React.FC = () => {
         </div>
         
         {/* Results count */}
-        <div className="px-4 py-2 text-sm text-gray-500">
+        <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">
           Showing {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, sortedData.length)} of {sortedData.length} results
         </div>
 
         {/* Table */}
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+          <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead className="bg-gray-50 dark:bg-gray-700">
               <tr>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
                   onClick={() => requestSort('name')}
                 >
                   <div className="flex items-center">
@@ -238,7 +238,7 @@ export const ResultsTableData: React.FC = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
                   onClick={() => requestSort('address')}
                 >
                   <div className="flex items-center">
@@ -248,7 +248,7 @@ export const ResultsTableData: React.FC = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
                   onClick={() => requestSort('rating')}
                 >
                   <div className="flex items-center">
@@ -258,7 +258,7 @@ export const ResultsTableData: React.FC = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
                   onClick={() => requestSort('reviews')}
                 >
                   <div className="flex items-center">
@@ -268,7 +268,7 @@ export const ResultsTableData: React.FC = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
                   onClick={() => requestSort('phone')}
                 >
                   <div className="flex items-center">
@@ -278,39 +278,39 @@ export const ResultsTableData: React.FC = () => {
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
                 >
                   Website
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
               {currentItems.map((hotel, index) => (
                 <tr 
                   key={index} 
-                  className="hover:bg-gray-50 cursor-pointer" 
+                  className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" 
                   onClick={() => handleRowClick(hotel)}
                 >
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">{hotel.name}</div>
+                    <div className="text-sm font-medium text-gray-900 dark:text-gray-100">{hotel.name}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="text-sm text-gray-500">{hotel.address}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">{hotel.address}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{hotel.rating}</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.rating}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{hotel.reviews}</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.reviews}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{hotel.phone}</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.phone}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {hotel.website ? (
                       <a
                         href={hotel.website}
-                        className="text-blue-600 hover:text-blue-900 truncate block max-w-xs"
+                        className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 truncate block max-w-xs"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()} // Prevent row click when clicking the link
@@ -318,14 +318,14 @@ export const ResultsTableData: React.FC = () => {
                         {hotel.website}
                       </a>
                     ) : (
-                      <span className="text-gray-400 italic">Not available</span>
+                      <span className="text-gray-400 dark:text-gray-500 italic">Not available</span>
                     )}
                   </td>
                 </tr>
               ))}
               {sortedData.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500">
+                  <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">
                     No results found for your search
                   </td>
                 </tr>
@@ -336,15 +336,15 @@ export const ResultsTableData: React.FC = () => {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+          <div className="px-4 py-3 flex items-center justify-between border-t border-gray-200 dark:border-gray-700 sm:px-6">
             <div className="flex-1 flex justify-between sm:hidden">
               <button
                 onClick={goToPreviousPage}
                 disabled={currentPage === 1}
-                className={`relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
+                className={`relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md ${
                   currentPage === 1
-                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                    ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
                 Previous
@@ -352,10 +352,10 @@ export const ResultsTableData: React.FC = () => {
               <button
                 onClick={goToNextPage}
                 disabled={currentPage === totalPages}
-                className={`ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md ${
+                className={`ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md ${
                   currentPage === totalPages
-                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                    ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
                 Next
@@ -363,7 +363,7 @@ export const ResultsTableData: React.FC = () => {
             </div>
             <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
               <div>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-700 dark:text-gray-300">
                   Showing <span className="font-medium">{indexOfFirstItem + 1}</span> to{' '}
                   <span className="font-medium">
                     {Math.min(indexOfLastItem, sortedData.length)}
@@ -376,10 +376,10 @@ export const ResultsTableData: React.FC = () => {
                   <button
                     onClick={goToPreviousPage}
                     disabled={currentPage === 1}
-                    className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
+                    className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium ${
                       currentPage === 1
-                        ? 'text-gray-300 cursor-not-allowed'
-                        : 'text-gray-500 hover:bg-gray-50'
+                        ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
+                        : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                     }`}
                   >
                     <span className="sr-only">Previous</span>
@@ -406,8 +406,8 @@ export const ResultsTableData: React.FC = () => {
                         onClick={() => goToPage(pageNum)}
                         className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
                           currentPage === pageNum
-                            ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
-                            : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
+                            ? 'z-10 bg-blue-50 dark:bg-blue-900 border-blue-500 text-blue-600 dark:text-blue-300'
+                            : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                         }`}
                       >
                         {pageNum}
@@ -418,10 +418,10 @@ export const ResultsTableData: React.FC = () => {
                   <button
                     onClick={goToNextPage}
                     disabled={currentPage === totalPages}
-                    className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
+                    className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium ${
                       currentPage === totalPages
-                        ? 'text-gray-300 cursor-not-allowed'
-                        : 'text-gray-500 hover:bg-gray-50'
+                        ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
+                        : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                     }`}
                   >
                     <span className="sr-only">Next</span>
@@ -434,11 +434,11 @@ export const ResultsTableData: React.FC = () => {
         )}
         
         {/* Items per page selector */}
-        <div className="px-4 py-3 border-t border-gray-200">
-          <div className="flex items-center text-sm text-gray-700">
+        <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-700">
+          <div className="flex items-center text-sm text-gray-700 dark:text-gray-300">
             <span>Show</span>
             <select
-              className="mx-2 border-gray-300 rounded-md"
+              className="mx-2 border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
               value={itemsPerPage}
               onChange={(e) => {
                 setItemsPerPage(Number(e.target.value));
