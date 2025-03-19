@@ -1,0 +1,362 @@
+[
+    {
+        "name": "Maiden Water Resort",
+        "address": "Butilska iza 369, Sarajevo 71000",
+        "rating": "4,8",
+        "reviews": "103",
+        "type": "hotels",
+        "phone": "062 990 466",
+        "website": "https://www.facebook.com/maidenwater"
+    },
+    {
+        "name": "Hotel Monti",
+        "address": "Veliko polje bb, Sarajevo 71240",
+        "rating": "4,4",
+        "reviews": "1.497",
+        "type": "hotels",
+        "phone": "033 744-700",
+        "website": "https://monti.ba/ba/index.html"
+    },
+    {
+        "name": "Hotel Old Town Residence",
+        "address": "Sagrdžije 38, Sarajevo 71000",
+        "rating": "4,5",
+        "reviews": "24",
+        "type": "hotels",
+        "phone": "061 455 550",
+        "website": null
+    },
+    {
+        "name": "Spa Hotel Terme",
+        "address": "Hrasnička cesta 14, Ilidža 71210",
+        "rating": "3,8",
+        "reviews": "1.657",
+        "type": "hotels",
+        "phone": "033 772-000",
+        "website": "https://hoteliilidza.ba/spa-hotel-terme/"
+    },
+    {
+        "name": "Oaza Hotel & Camping & Restaurant",
+        "address": "IV viteške brigade 4, Sarajevo-Ilidža 71210",
+        "rating": "4,1",
+        "reviews": "1.411",
+        "type": "hotels",
+        "phone": "033 726-002",
+        "website": "http://www.hoteliilidza.ba/"
+    },
+    {
+        "name": "Hotel Hills",
+        "address": "Butmirska cesta 18, Ilidža, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "9.887",
+        "type": "hotels",
+        "phone": "033 947-947",
+        "website": "http://www.hotelhills.ba/"
+    },
+    {
+        "name": "Hotel Hayat Hills",
+        "address": "Sarajevskih Gazija 115, Sarajevo 71000",
+        "rating": "3,6",
+        "reviews": "449",
+        "type": "hotels",
+        "phone": "061 448 707",
+        "website": "https://hayat-hills.ba/"
+    },
+    {
+        "name": "Pino Nature Hotel, BW Premier Collection",
+        "address": "Trebević Ravne br. 1 Sarajevo 71, 000",
+        "rating": "4,3",
+        "reviews": "5.095",
+        "type": "hotels",
+        "phone": "033 257-800",
+        "website": "http://pino-hotel.com/"
+    },
+    {
+        "name": "Villas and apartments Oaza",
+        "address": "R7HW+6RJ، Lužani، إيليجا،, Ilidža",
+        "rating": "3,0",
+        "reviews": "42",
+        "type": "hotels",
+        "phone": "033 772-000",
+        "website": null
+    },
+    {
+        "name": "Tent Camping",
+        "address": "Ferida Srnje 16, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "18",
+        "type": "hotels",
+        "phone": "066 409-323",
+        "website": null
+    },
+    {
+        "name": "Hotel Radon Plaza",
+        "address": "Džemala Bijedića 185, Sarajevo 71000",
+        "rating": "4,4",
+        "reviews": "3.058",
+        "type": "hotels",
+        "phone": "033 752-900",
+        "website": "http://www.radonplaza.ba/"
+    },
+    {
+        "name": "Apartmani Zaara",
+        "address": "Toplik 15, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "116",
+        "type": "hotels",
+        "phone": "061 450 284",
+        "website": null
+    },
+    {
+        "name": "Hotel Victoria",
+        "address": "Vojvode Radomira Putnika 5, 71123",
+        "rating": 0,
+        "reviews": 0,
+        "type": "hotels",
+        "phone": "066 929-545",
+        "website": null
+    },
+    {
+        "name": "Hotel Victoria",
+        "address": "Vojvode Radomira Putnika 5, 71123",
+        "rating": "3,8",
+        "reviews": "72",
+        "type": "hotels",
+        "phone": "066 929-545",
+        "website": null
+    },
+    {
+        "name": "Hotel Boutique Anoma",
+        "address": "Blažujski drum 1, Sarajevo 71210",
+        "rating": "4,9",
+        "reviews": "118",
+        "type": "hotels",
+        "phone": "060 34 88 849",
+        "website": "https://anoma.ba/"
+    },
+    {
+        "name": "Hotel Grand Sarajevo",
+        "address": "Muhameda Ef. Pandže 7, Sarajevo 71000",
+        "rating": "3,8",
+        "reviews": "1.381",
+        "type": "hotels",
+        "phone": "033 563-100",
+        "website": "http://www.hotelgrand.com/"
+    },
+    {
+        "name": "Beograd",
+        "address": "Vojvode Radomira Putnika 8, 71123",
+        "rating": "3,6",
+        "reviews": "216",
+        "type": "hotels",
+        "phone": "066 398-851",
+        "website": null
+    },
+    {
+        "name": "VIP Apartments Sarajevo",
+        "address": "Dr. Mustafe Pintola br. 31, Sarajevo 71000",
+        "rating": "4,0",
+        "reviews": "176",
+        "type": "hotels",
+        "phone": "063 999 212",
+        "website": "http://vipsarajevo.com/#/home"
+    },
+    {
+        "name": "Hotel Malak Regency | Konferencijska Sala & Svadbeni Salon",
+        "address": "Hrasnička cesta bb, Ilidža 71210",
+        "rating": "4,6",
+        "reviews": "2.985",
+        "type": "hotels",
+        "phone": "033 777-200",
+        "website": "https://www.malakregency.com/"
+    },
+    {
+        "name": "Hotel Malak Regency | Konferencijska Sala & Svadbeni Salon",
+        "address": "Hrasnička cesta bb, Ilidža 71210",
+        "rating": "4,6",
+        "reviews": "2.985",
+        "type": "hotels",
+        "phone": "033 777-200",
+        "website": "https://www.malakregency.com/"
+    },
+    {
+        "name": "Motel Bella Italia",
+        "address": "Rustem-pašina 16, Ilidža 71210",
+        "rating": "4,2",
+        "reviews": "120",
+        "type": "hotels",
+        "phone": "060 32 26 297",
+        "website": null
+    },
+    {
+        "name": "Deluxe Nortel Hotel",
+        "address": "Maršala Tita 38, Sarajevo 71000",
+        "rating": "4,3",
+        "reviews": "54",
+        "type": "hotels",
+        "phone": "061 313 404",
+        "website": null
+    },
+    {
+        "name": "HOSTEL ONE LOVE",
+        "address": "Pehlivanuša 67, Sarajevo 71000",
+        "rating": "4,8",
+        "reviews": "152",
+        "type": "hotels",
+        "phone": "062 333 660",
+        "website": null
+    },
+    {
+        "name": "Sarajevo Rooms",
+        "address": "Karpuzova 13, Sarajevo 71000",
+        "rating": "4,8",
+        "reviews": "45",
+        "type": "hotels",
+        "phone": null,
+        "website": "http://sarajevo-rooms.com.es/"
+    },
+    {
+        "name": "Hotel DRINA Premium",
+        "address": "BA, 10, Bačići, Sarajevo 71000",
+        "rating": "4,5",
+        "reviews": "771",
+        "type": "hotels",
+        "phone": "033 872-422",
+        "website": "http://hoteldrina.ba/"
+    },
+    {
+        "name": "Hotel Hollywood Sarajevo",
+        "address": "Dr. Mustafe Pintola 23, Ilidža 71210",
+        "rating": "4,0",
+        "reviews": "4.574",
+        "type": "hotels",
+        "phone": "033 773-100",
+        "website": "http://www.hotel-hollywood.ba/"
+    },
+    {
+        "name": "Hotel Boutique Anoma",
+        "address": "Blažujski drum 1, Sarajevo 71210",
+        "rating": 0,
+        "reviews": 0,
+        "type": "hotels",
+        "phone": "060 34 88 849",
+        "website": "https://anoma.ba/"
+    },
+    {
+        "name": "Hotel Radon Plaza",
+        "address": "Džemala Bijedića 185, Sarajevo 71000",
+        "rating": "4,4",
+        "reviews": "3.058",
+        "type": "hotels",
+        "phone": "033 752-900",
+        "website": "http://www.radonplaza.ba/"
+    },
+    {
+        "name": "m-Jasmin",
+        "address": "Kupreška 26, Sarajevo 71000",
+        "rating": "3,6",
+        "reviews": "109",
+        "type": "hotels",
+        "phone": "033 973-021",
+        "website": "https://m-jasmin.com/"
+    },
+    {
+        "name": "Pandoras's Place",
+        "address": "Evlije Čelebije 16, Sarajevo 71000",
+        "rating": 0,
+        "reviews": 0,
+        "type": "hotels",
+        "phone": null,
+        "website": null
+    },
+    {
+        "name": "Alfar House",
+        "address": "Talirovića 32, Sarajevo 71000",
+        "rating": "5,0",
+        "reviews": "6",
+        "type": "hotels",
+        "phone": null,
+        "website": null
+    },
+    {
+        "name": "Hotel Hayat",
+        "address": "Abdesthana 47, Sarajevo 71000",
+        "rating": "3,4",
+        "reviews": "746",
+        "type": "hotels",
+        "phone": "061 448 707",
+        "website": "https://hotel-hayat.ba/"
+    },
+    {
+        "name": "Ljubicica Hostel",
+        "address": "Mula Mustafe Bašeskije 65, Sarajevo 71000",
+        "rating": "3,8",
+        "reviews": "129",
+        "type": "hotels",
+        "phone": "061 131 813",
+        "website": null
+    },
+    {
+        "name": "APARTHOTEL CENTAR SARAJEVO",
+        "address": "Muamera Omerbegovića 3, Sarajevo 71000",
+        "rating": "4,3",
+        "reviews": "565",
+        "type": "hotels",
+        "phone": "061 484 493",
+        "website": "https://www.booking.com/hotel/ba/quot-aparthotel-centar-quot-sarajevo.hr.html?label=gen173nr-1FCAEoggI46AdIM1gEaBKIAQGYARC4ARjIAQzYAQHoAQH4AQuIAgGoAgS4Aq7_kvoFwAIB0gIkOWFmYmEwNDEtNDM5MC00MDM1LWIzYzUtNGJiYmFhNDgzM2Zk2AIG4AIB;sid=570e17d4f48b94e42f3f5519a6749a76;dest_id=-94996;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A,A;sb_price_type=total;sr_order=popularity;srepoch=1598341052;srpvid=d9de359d6ac70022;type=total;ucfs=1&#hotelTmpl"
+    },
+    {
+        "name": "Exotic Nature Hostel",
+        "address": "VC4M+668, Budžak, Sarajevo 71000",
+        "rating": "4,5",
+        "reviews": "15",
+        "type": "hotels",
+        "phone": null,
+        "website": null
+    },
+    {
+        "name": "Joy apartment",
+        "address": "Strossmayerova 3, Sarajevo 71000",
+        "rating": 0,
+        "reviews": 0,
+        "type": "hotels",
+        "phone": "060 34 36 264",
+        "website": null
+    },
+    {
+        "name": "Beograd",
+        "address": "Vojvode Radomira Putnika 8, 71123",
+        "rating": "3,6",
+        "reviews": "216",
+        "type": "hotels",
+        "phone": "066 398-851",
+        "website": null
+    },
+    {
+        "name": "Hotel Park",
+        "address": "Gornja Jošanica II 1, Sarajevo 71320",
+        "rating": "4,2",
+        "reviews": "338",
+        "type": "hotels",
+        "phone": "033 433-000",
+        "website": null
+    },
+    {
+        "name": "Heritage Hotel Krone",
+        "address": "Velika aleja 1, Ilidža",
+        "rating": "4,5",
+        "reviews": "869",
+        "type": "hotels",
+        "phone": "033 257-960",
+        "website": "https://www.hotelkrone.ba/?lang=en"
+    },
+    {
+        "name": "Hostel Scandic",
+        "address": "Branilaca Sarajeva 31, Sarajevo 71000",
+        "rating": "3,9",
+        "reviews": "40",
+        "type": "hotels",
+        "phone": "033 872-039",
+        "website": null
+    }
+]
