@@ -165,6 +165,19 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
     setSelectedHotel(null);
   };
 
+  const getDomainFromUrl = (url: string) => {
+    try {
+      if (!/^https?:\/\//i.test(url)) {
+        url = 'http://' + url; // Prepend http:// if not present
+      }
+      const parsedUrl = new URL(url);
+      return parsedUrl.hostname;
+    } catch (error) {
+      console.error("Invalid URL", error);
+      return ''; // Return an empty string if the URL is invalid
+    }
+  };  
+
   // Show a message if no job is selected
   if (!jobId) {
     return (
@@ -363,7 +376,7 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()} // Prevent row click when clicking the link
                       >
-                        {hotel.website}
+                        {getDomainFromUrl(hotel.website)}
                       </a>
                     ) : (
                       <span className="text-gray-400 dark:text-gray-500 italic">Not available</span>
