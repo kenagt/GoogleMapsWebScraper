@@ -10,6 +10,7 @@ interface Hotel {
   type: string;
   phone: string;
   website: string | null;
+  emails: string; // Added emails field
 }
 
 interface HotelDetailViewProps {
@@ -19,6 +20,26 @@ interface HotelDetailViewProps {
 
 // Detail Record component
 const ResultDetailView: React.FC<HotelDetailViewProps> = ({ hotel, onClose }) => {
+  // Function to format emails as a list when there are multiple
+  const formatEmails = (emailsString: string) => {
+    if (!emailsString || emailsString.trim() === '') {
+      return null;
+    }
+    
+    // Split by commas and filter out any empty strings or image references
+    const emails = emailsString.split(',')
+      .map(email => email.trim())
+      .filter(email => email && !email.endsWith('.png') && !email.endsWith('.jpg') && !email.endsWith('.jpeg'));
+    
+    if (emails.length === 0) {
+      return null;
+    }
+    
+    return emails;
+  };
+  
+  const emailsList = formatEmails(hotel.emails);
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -85,6 +106,26 @@ const ResultDetailView: React.FC<HotelDetailViewProps> = ({ hotel, onClose }) =>
                 >
                   {hotel.website}
                 </a>
+              ) : (
+                <p className="text-gray-400 dark:text-gray-500 italic">Not available</p>
+              )}
+            </div>
+            
+            {/* Added emails section */}
+            <div className="md:col-span-2">
+              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Email Contacts</h3>
+              {emailsList && emailsList.length > 0 ? (
+                <div className="space-y-1">
+                  {emailsList.map((email, index) => (
+                    <a 
+                      key={index}
+                      href={`mailto:${email}`}
+                      className="block text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline break-words"
+                    >
+                      {email}
+                    </a>
+                  ))}
+                </div>
               ) : (
                 <p className="text-gray-400 dark:text-gray-500 italic">Not available</p>
               )}

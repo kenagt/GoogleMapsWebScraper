@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Search, ArrowUpDown, ChevronLeft, ChevronRight, X, AlertCircle, Download } from 'lucide-react';
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight, X, AlertCircle, Download, Mail } from 'lucide-react';
 import HotelDetailView from './ResultDetailView';
 
 // Define the type for hotel data
@@ -12,6 +12,7 @@ interface Hotel {
   type: string;
   phone: string;
   website: string | null;
+  emails: string; // Added emails field
 }
 
 interface ResultsTableDataProps {
@@ -170,12 +171,24 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
     }
   };
 
+  // Function to check if hotel has valid emails
+  const hasValidEmails = (emailsString: string) => {
+    if (!emailsString || emailsString.trim() === '') return false;
+    
+    // Check if there's at least one valid email (not image references)
+    return emailsString.split(',')
+      .some(email => {
+        const trimmed = email.trim();
+        return trimmed && !trimmed.endsWith('.png') && !trimmed.endsWith('.jpg') && !trimmed.endsWith('.jpeg');
+      });
+  };
+
   // CSV Export function
   const exportToCSV = () => {
     if (sortedData.length === 0) return;
     
-    // Define CSV headers
-    const headers = ['Name', 'Address', 'Rating', 'Reviews', 'Type', 'Phone', 'Website'];
+    // Define CSV headers - updated to include emails
+    const headers = ['Name', 'Address', 'Rating', 'Reviews', 'Type', 'Phone', 'Website', 'Emails'];
     
     // Convert data to CSV format
     const csvData = sortedData.map(hotel => [
@@ -185,7 +198,8 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
       hotel.reviews || 'N/A',
       hotel.type,
       hotel.phone || 'N/A',
-      hotel.website || 'N/A'
+      hotel.website || 'N/A',
+      `"${hotel.emails?.replace(/"/g, '""') || 'N/A'}"` // Added emails field
     ]);
     
     // Combine headers and data
@@ -384,6 +398,13 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
                 >
                   Website
                 </th>
+                {/* Added Email column */}
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
+                >
+                  Email
+                </th>
               </tr>
             </thead>
             <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
@@ -426,11 +447,22 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
                       <span className="text-gray-400 dark:text-gray-500 italic">Not available</span>
                     )}
                   </td>
+                  {/* Added Email column cell */}
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {hasValidEmails(hotel.emails) ? (
+                      <div className="flex items-center text-blue-600 dark:text-blue-400">
+                        <Mail className="h-4 w-4 mr-1" />
+                        <span>Available</span>
+                      </div>
+                    ) : (
+                      <span className="text-gray-400 dark:text-gray-500 italic">Not available</span>
+                    )}
+                  </td>
                 </tr>
               ))}
               {sortedData.length === 0 && (
                 <tr>
-                  <td colSpan={7} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                  <td colSpan={8} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">
                     No results found for your search
                   </td>
                 </tr>
