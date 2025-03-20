@@ -13,10 +13,9 @@ class EmailOutput(Thread):
     def run(self):
         while True:
             domain, emaillist = self.work.get()
-            
-            for result in self.json_data['results']:
-                website = result.get('website')
-                if website is not None and website == domain:  # This will include websites that are explicitly null
+            print(domain)
+            for website in self.json_data['results']:
+                if website["website"] == domain:  # This will include websites that are explicitly null
                     website["emails"] = emaillist
 
             print(self.job_file)

@@ -1,0 +1,161 @@
+{
+    "id": "d2145fd1-1d52-4fdd-87c8-60a1d016bb35",
+    "location": "sarajevo",
+    "radius": 5,
+    "type": "hotels",
+    "status": "completed",
+    "createdAt": "2025-03-20 13:51:29.180559+00:00",
+    "results": [
+        {
+            "name": "Deluxe Nortel Hotel",
+            "address": "Mars\u030cala Tita 38, Sarajevo 71000",
+            "rating": "4,3",
+            "reviews": "54",
+            "type": "hotels",
+            "phone": "061 313 404",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "APARTHOTEL CENTAR SARAJEVO",
+            "address": "Muamera Omerbegovic\u0301a 3, Sarajevo 71000",
+            "rating": "4,3",
+            "reviews": "565",
+            "type": "hotels",
+            "phone": "061 484 493",
+            "website": "https://www.booking.com/hotel/ba/quot-aparthotel-centar-quot-sarajevo.hr.html?label=gen173nr-1FCAEoggI46AdIM1gEaBKIAQGYARC4ARjIAQzYAQHoAQH4AQuIAgGoAgS4Aq7_kvoFwAIB0gIkOWFmYmEwNDEtNDM5MC00MDM1LWIzYzUtNGJiYmFhNDgzM2Zk2AIG4AIB;sid=570e17d4f48b94e42f3f5519a6749a76;dest_id=-94996;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A,A;sb_price_type=total;sr_order=popularity;srepoch=1598341052;srpvid=d9de359d6ac70022;type=total;ucfs=1&#hotelTmpl",
+            "emails": "r@3x.png, ime@primjer.com, aparthotel.cs@gmail.com"
+        },
+        {
+            "name": "Hotel VIP",
+            "address": "Jaroslava C\u030cernija 3, Sarajevo 71000",
+            "rating": "4,5",
+            "reviews": "251",
+            "type": "hotels",
+            "phone": "033 535-533",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Grand Sarajevo",
+            "address": "Muhameda Ef. Pandz\u030ce 7, Sarajevo 71000",
+            "rating": "3,8",
+            "reviews": "1.381",
+            "type": "hotels",
+            "phone": "033 563-100",
+            "website": "http://www.hotelgrand.com/",
+            "emails": "d.salihbegovic@hotelgrand.com, booking@hotelgrand.com"
+        },
+        {
+            "name": "Residence Inn",
+            "address": "Skenderija 43, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "709",
+            "type": "hotels",
+            "phone": "033 563-600",
+            "website": "https://www.marriott.com/en-us/hotels/sjjri-residence-inn-sarajevo/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Boutique 36 Sarajevo",
+            "address": "Safvet-bega Bas\u030cagic\u0301a 36, Sarajevo 71000",
+            "rating": "4,5",
+            "reviews": "198",
+            "type": "hotels",
+            "phone": "033 233-309",
+            "website": "http://www.hb36.ba/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Hayat",
+            "address": "Abdesthana 47, Sarajevo 71000",
+            "rating": "3,4",
+            "reviews": "746",
+            "type": "hotels",
+            "phone": "061 448 707",
+            "website": "https://hotel-hayat.ba/",
+            "emails": "sample@yourcompany.com, info@hotel-hayat.ba"
+        },
+        {
+            "name": "Residence Prime Luxury Sarajevo",
+            "address": "71000, Ferhadija 8, Sarajevo 71000",
+            "rating": 0,
+            "reviews": 0,
+            "type": "hotels",
+            "phone": "060 31 10 509",
+            "website": "http://residenceprime.com/",
+            "emails": ""
+        },
+        {
+            "name": "Residence Prime Luxury Sarajevo",
+            "address": "71000, Ferhadija 8, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "65",
+            "type": "hotels",
+            "phone": "060 31 10 509",
+            "website": "http://residenceprime.com/",
+            "emails": ""
+        },
+        {
+            "name": "Vila Alexandra",
+            "address": "Djoke Mazalica br 4, Sarajevo 71000",
+            "rating": "4,4",
+            "reviews": "57",
+            "type": "hotels",
+            "phone": "063 903 019",
+            "website": "http://www.vilaalexandra.ba/",
+            "emails": "info@vilaalexandra.ba"
+        },
+        {
+            "name": "Hotel Cosmopolit",
+            "address": "Radic\u0301eva 15, Sarajevo 71000",
+            "rating": "4,1",
+            "reviews": "188",
+            "type": "hotels",
+            "phone": "033 251-100",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Holiday",
+            "address": "Zmaja od Bosne 4, Sarajevo 71000",
+            "rating": "4,1",
+            "reviews": "3.596",
+            "type": "hotels",
+            "phone": "033 288-200",
+            "website": "http://www.hotelholiday.ba/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Story",
+            "address": "Muvekita 4, Sarajevo 71000",
+            "rating": "4,5",
+            "reviews": "326",
+            "type": "hotels",
+            "phone": "033 551-555",
+            "website": "http://www.story-hotel.com/",
+            "emails": "info@story-hotel.com"
+        },
+        {
+            "name": "Courtyard by Marriott",
+            "address": "Skenderija 1, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "1.467",
+            "type": "hotels",
+            "phone": "033 954-500",
+            "website": "https://www.marriott.com/en-us/hotels/sjjcy-courtyard-sarajevo/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Begi\u0107",
+            "address": "Abdesthana 4, Sarajevo 71000",
+            "rating": "3,8",
+            "reviews": "62",
+            "type": "hotels",
+            "phone": "033 868-888",
+            "website": null,
+            "emails": ""
+        }
+    ],
+    "completedAt": "2025-03-20 13:52:58.376850+00:00"
+}
