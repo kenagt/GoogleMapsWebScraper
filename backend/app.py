@@ -60,7 +60,8 @@ def run_scraping_job(job_id, location, radius, type_filter):
         job['results'] = results
         job['completedAt'] = str(datetime.now(timezone.utc))
         save_job(job_id, job)
-        
+        scraper.scrape_website_emails(job_file)
+
     except Exception as e:
         # Update job status to failed
         try:

@@ -8,10 +8,13 @@ from selenium.common.exceptions import TimeoutException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from domain_explorer import DomainExplorer
+from email_output import EmailOutput
 import time
 import json
 import re
 import unicodedata
+import queue
 
 class GoogleMapsScraper:
     def __init__(self):
@@ -32,11 +35,55 @@ class GoogleMapsScraper:
             results.extend(self._scrape_type(location, radius, 'restaurants'))
         else:
             results.extend(self._scrape_type(location, radius, type_filter))
-                    
-        self.write_to_json(results)   
-         
+
         return results
         
+    def scrape_website_emails(self, job_file):
+        # Read the JSON file
+        with open(job_file, 'r') as file:
+            json_data = json.load(file)
+
+       # Extract all website fields
+        websites = []
+        for result in json_data['results']:
+            website = result.get('website')
+            if website is not None:  # This will include websites that are explicitly null
+                websites.append(website)
+
+        # Filter out None values if you want only actual websites
+        actual_websites = [website for website in websites if website]
+                
+        self.perform_email_scraping(websites, json_data, job_file)
+
+    def perform_email_scraping(self, websites, json_data, job_file):
+        # Define two queues to work with. Set maxsize for the main queue
+        domainqueue = queue.Queue(maxsize=5000)
+        emailsqueue = queue.Queue()
+
+        # Start our threads
+        for _i in range(20):
+            t = DomainExplorer(domainqueue, emailsqueue)
+            t.daemon = True
+            t.start()
+
+        print(f"Started {20} Threads")
+
+        # Start our collector thread
+        results_thread = EmailOutput(emailsqueue, json_data, job_file)
+        results_thread.daemon = True
+        results_thread.start()
+
+        # Add domains to the queue from a context manager to save memory
+        
+        for domain in websites:
+            domainqueue.put(domain)
+
+        # Gracefully join our queues so that our threads can exit
+        domainqueue.join()
+        print("Domains finished processing")
+        emailsqueue.join()
+        print("Collector finished processing")
+
     def scrape_google_maps_urls(self):
         # Google maps and results are successfully loaded
         # Initialize the output list
@@ -203,13 +250,3 @@ class GoogleMapsScraper:
 
     def close(self):
         self.driver.quit()
-
-    def write_to_json(self, results):
-        """Writes the scraped data to a JSON file."""
-        try:
-            with open("results/results.json", "w", encoding="utf-8") as f:  # Specify encoding
-                json.dump(results, f, indent=4, ensure_ascii=False
-                        )  # Pretty print and handle non-ASCII characters
-            print(f"Data written to results.json")
-        except Exception as e:
-            print(f"Error writing to JSON file: {e}")

@@ -1,14 +1,18 @@
 import { useQuery } from 'react-query';
 import { format } from 'date-fns';
-import { Loader2, AlertCircle, CheckCircle, Clock, MapPin } from 'lucide-react';
+import { Loader2, AlertCircle, CheckCircle, Clock, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { api } from '../api';
 import { ScrapingJob } from '../models/types';
+import { useState } from 'react';
 
 interface ResultsTableProps {
   onJobSelect: (jobId: string) => void;
 }
 
 export function ResultsTable({ onJobSelect }: ResultsTableProps) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 5;
+
   const { data: jobs, isLoading, error } = useQuery('jobs', api.getJobs, {
     refetchInterval: 5000, // Refresh every 5 seconds
     retry: 1, // Only retry once to avoid too many failed attempts
@@ -39,6 +43,21 @@ export function ResultsTable({ onJobSelect }: ResultsTableProps) {
     );
   }
 
+  // Sort jobs by createdAt date in descending order (newest first)
+  const sortedJobs = jobs ? [...jobs].sort((a, b) => 
+    new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  ) : [];
+
+  // Calculate pagination
+  const totalPages = Math.ceil((sortedJobs?.length || 0) / recordsPerPage);
+  const indexOfLastRecord = currentPage * recordsPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+  const currentRecords = sortedJobs.slice(indexOfFirstRecord, indexOfLastRecord);
+
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
       <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -52,7 +71,7 @@ export function ResultsTable({ onJobSelect }: ResultsTableProps) {
           </tr>
         </thead>
         <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-          {jobs?.map((job: ScrapingJob) => (
+          {currentRecords.map((job: ScrapingJob) => (
             <tr 
               key={job.id} 
               onClick={() => handleRowClick(job)}
@@ -79,6 +98,54 @@ export function ResultsTable({ onJobSelect }: ResultsTableProps) {
           ))}
         </tbody>
       </table>
+      
+      {/* Pagination */}
+      <div className="px-6 py-3 bg-gray-50 dark:bg-gray-700 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+        <div className="text-sm text-gray-500 dark:text-gray-400">
+          Showing {indexOfFirstRecord + 1}-{Math.min(indexOfLastRecord, sortedJobs.length)} of {sortedJobs.length} results
+        </div>
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => paginate(Math.max(currentPage - 1, 1))}
+            disabled={currentPage === 1}
+            className={`p-1 rounded-md ${
+              currentPage === 1
+                ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
+                : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+            }`}
+            aria-label="Previous page"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i + 1}
+              onClick={() => paginate(i + 1)}
+              className={`px-3 py-1 rounded-md ${
+                currentPage === i + 1
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              {i + 1}
+            </button>
+          ))}
+          
+          <button
+            onClick={() => paginate(Math.min(currentPage + 1, totalPages))}
+            disabled={currentPage === totalPages || totalPages === 0}
+            className={`p-1 rounded-md ${
+              currentPage === totalPages || totalPages === 0
+                ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
+                : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+            }`}
+            aria-label="Next page"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
