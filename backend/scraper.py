@@ -16,12 +16,11 @@ import unicodedata
 class GoogleMapsScraper:
     def __init__(self):
         chrome_options = Options()
-        chrome_options.add_argument('--headless')
+        chrome_options.add_argument("--headless=new")
         chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--start-fullscreen')
         
-        service = Service(ChromeDriverManager().install())
-        self.driver = webdriver.Chrome(service=service, options=chrome_options)
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.wait = WebDriverWait(self.driver, 10)
         
     def scrape(self, location, radius, type_filter):
@@ -61,7 +60,7 @@ class GoogleMapsScraper:
             self.driver.execute_script("arguments[0].scrollIntoView();", businesses[-1])
             time.sleep(3)
             
-            #break
+            break
 
             try:
                 # Check if new businesses are loaded
@@ -102,12 +101,11 @@ class GoogleMapsScraper:
             print(f"An error occurred: {e}")
             print(f"An error occurred: {e.__traceback__.tb_lineno}")
     
+        # Process each business one by one
         for item in place_elements:
             try:
                 # Click on item to load details
-                self.driver.execute_script("arguments[0].click();", item) 
-
-                #item.click()
+                item.click()
                 time.sleep(3)
                 
                 # Extract information
@@ -171,7 +169,7 @@ class GoogleMapsScraper:
                 print(f"Results number: {str(len(results))}")
                 
             except Exception as e:
-                print(f"Error extracting item details: {str(e)}")
+                print(f"Error extracting item details: {e}")
                 print(f"An error occurred: {e.__traceback__.tb_lineno}")
                 continue
             

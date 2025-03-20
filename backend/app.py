@@ -13,8 +13,8 @@ CORS(app)
 jobs = {}
 
 def run_scraping_job(job_id, location, radius, type_filter):
+    scraper = GoogleMapsScraper()
     try:
-        scraper = GoogleMapsScraper()
         jobs[job_id]['status'] = 'running'
         
         results = scraper.scrape(location, radius, type_filter)
@@ -25,7 +25,7 @@ def run_scraping_job(job_id, location, radius, type_filter):
         
     except Exception as e:
         jobs[job_id]['status'] = 'failed'
-        print(f"Scraping failed: {str(e)}")
+        print(f"Scraping failed: {e}")
     finally:
         scraper.close()
 
