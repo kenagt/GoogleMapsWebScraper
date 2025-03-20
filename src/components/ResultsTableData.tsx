@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Search, ArrowUpDown, ChevronLeft, ChevronRight, X, AlertCircle } from 'lucide-react';
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight, X, AlertCircle, Download } from 'lucide-react';
 import HotelDetailView from './ResultDetailView';
 
 // Define the type for hotel data
@@ -176,7 +176,49 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
       console.error("Invalid URL", error);
       return ''; // Return an empty string if the URL is invalid
     }
-  };  
+  };
+
+  // CSV Export function
+  const exportToCSV = () => {
+    if (sortedData.length === 0) return;
+    
+    // Define CSV headers
+    const headers = ['Name', 'Address', 'Rating', 'Reviews', 'Type', 'Phone', 'Website'];
+    
+    // Convert data to CSV format
+    const csvData = sortedData.map(hotel => [
+      `"${hotel.name.replace(/"/g, '""')}"`, // Escape quotes in CSV
+      `"${hotel.address.replace(/"/g, '""')}"`,
+      hotel.rating || 'N/A',
+      hotel.reviews || 'N/A',
+      hotel.type,
+      hotel.phone || 'N/A',
+      hotel.website || 'N/A'
+    ]);
+    
+    // Combine headers and data
+    const csvContent = [
+      headers.join(','),
+      ...csvData.map(row => row.join(','))
+    ].join('\n');
+    
+    // Create blob and download link
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    
+    // Set file name with job ID and timestamp
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const fileName = `hotel-data-${jobId}-${timestamp}.csv`;
+    
+    link.setAttribute('href', url);
+    link.setAttribute('download', fileName);
+    link.style.visibility = 'hidden';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // Show a message if no job is selected
   if (!jobId) {
@@ -248,9 +290,9 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
       )}
       
       <div className="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg">
-        {/* Search bar */}
-        <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-          <div className="relative rounded-md shadow-sm">
+        {/* Search and export bar */}
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex flex-wrap items-center justify-between gap-4">
+          <div className="relative rounded-md shadow-sm flex-grow max-w-md">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <Search className="h-4 w-4 text-gray-400 dark:text-gray-500" />
             </div>
@@ -262,6 +304,16 @@ export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => 
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
+          
+          {/* Export to CSV button */}
+          <button
+            onClick={exportToCSV}
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={sortedData.length === 0}
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Export to CSV
+          </button>
         </div>
         
         {/* Results count */}

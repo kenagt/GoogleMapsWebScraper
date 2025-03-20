@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ScrapingJob, ScrapingRequest } from './types';
+import { ScrapingJob, ScrapingRequest } from './models/types';
 
 // Create axios instance with default config
 const axiosInstance = axios.create({

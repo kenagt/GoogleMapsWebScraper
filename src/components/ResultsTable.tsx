@@ -1,9 +1,8 @@
-import React from 'react';
 import { useQuery } from 'react-query';
 import { format } from 'date-fns';
 import { Loader2, AlertCircle, CheckCircle, Clock, MapPin } from 'lucide-react';
 import { api } from '../api';
-import { ScrapingJob } from '../types';
+import { ScrapingJob } from '../models/types';
 
 interface ResultsTableProps {
   onJobSelect: (jobId: string) => void;
