@@ -81,6 +81,7 @@ class GoogleMapsScraper:
         # Gracefully join our queues so that our threads can exit
         domainqueue.join()
         print("Domains finished processing")
+        
         emailsqueue.join()
         print("Collector finished processing")
 
@@ -213,7 +214,8 @@ class GoogleMapsScraper:
                     'reviews': reviews,
                     'type': type_filter,
                     'phone': phone,
-                    'website': website
+                    'website': website,
+                    'emails': ""
                 })
                 print(f"Results number: {str(len(results))}")
                 

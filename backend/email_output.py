@@ -13,14 +13,15 @@ class EmailOutput(Thread):
     def run(self):
         while True:
             domain, emaillist = self.work.get()
-
+            
             for result in self.json_data['results']:
                 website = result.get('website')
-                if website is not None:  # This will include websites that are explicitly null
+                if website is not None and website == domain:  # This will include websites that are explicitly null
                     website["emails"] = emaillist
 
+            print(self.job_file)
             # Write the updated JSON back to the file
-            with open(job_file, 'w') as file:
+            with open(self.job_file, 'w') as file:
                 json.dump(self.json_data, file, indent=4)
             
             self.work.task_done()
