@@ -5,12 +5,20 @@ import { Loader2, AlertCircle, CheckCircle, Clock, MapPin } from 'lucide-react';
 import { api } from '../api';
 import { ScrapingJob } from '../types';
 
-export function ResultsTable() {
+interface ResultsTableProps {
+  onJobSelect: (jobId: string) => void;
+}
+
+export function ResultsTable({ onJobSelect }: ResultsTableProps) {
   const { data: jobs, isLoading, error } = useQuery('jobs', api.getJobs, {
     refetchInterval: 5000, // Refresh every 5 seconds
     retry: 1, // Only retry once to avoid too many failed attempts
     retryDelay: 1000 // Wait 1 second before retrying
   });
+
+  const handleRowClick = (job: ScrapingJob) => {
+    onJobSelect(job.id);
+  };
 
   if (isLoading) {
     return (
@@ -46,7 +54,11 @@ export function ResultsTable() {
         </thead>
         <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
           {jobs?.map((job: ScrapingJob) => (
-            <tr key={job.id}>
+            <tr 
+              key={job.id} 
+              onClick={() => handleRowClick(job)}
+              className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+            >
               <td className="px-6 py-4 whitespace-nowrap">
                 <StatusBadge status={job.status} />
               </td>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Search, ArrowUpDown, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight, X, AlertCircle } from 'lucide-react';
 import HotelDetailView from './ResultDetailView';
 
 // Define the type for hotel data
@@ -14,10 +14,14 @@ interface Hotel {
   website: string | null;
 }
 
-export const ResultsTableData: React.FC = () => {
+interface ResultsTableDataProps {
+  jobId: string | null;
+}
+
+export const ResultsTableData: React.FC<ResultsTableDataProps> = ({ jobId }) => {
   const [data, setData] = useState<Hotel[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sortConfig, setSortConfig] = useState<{
     key: keyof Hotel;
@@ -33,20 +37,36 @@ export const ResultsTableData: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      // Reset data and error when job changes
+      setData([]);
+      setError(null);
+      
+      // If no job is selected, don't try to fetch data
+      if (!jobId) {
+        return;
+      }
+      
       try {
         setLoading(true);
-        const response = await fetch('/backend/results/results.json');
+        // Fetch data from the specific job file
+        const response = await fetch(`/backend/jobs/${jobId}.json`);
         
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         
         const jsonData = await response.json();
-        setData(jsonData);
-        setError(null);
+        
+        // Set data from the results array if it exists
+        if (jsonData && jsonData.results && Array.isArray(jsonData.results)) {
+          setData(jsonData.results);
+        } else {
+          setData([]);
+          setError('No results found in the job data');
+        }
       } catch (err) {
         console.error('Error fetching data:', err);
-        setError('Failed to load data. Please try again later.');
+        setError('Failed to load job data. Please try again later.');
         setData([]);
       } finally {
         setLoading(false);
@@ -54,7 +74,9 @@ export const ResultsTableData: React.FC = () => {
     };
 
     fetchData();
-  }, []);
+    // Reset to first page when job changes
+    setCurrentPage(1);
+  }, [jobId]);
 
   // Handle sorting
   const requestSort = (key: keyof Hotel) => {
@@ -143,6 +165,19 @@ export const ResultsTableData: React.FC = () => {
     setSelectedHotel(null);
   };
 
+  // Show a message if no job is selected
+  if (!jobId) {
+    return (
+      <div className="bg-white dark:bg-gray-800 shadow sm:rounded-lg p-8 text-center">
+        <AlertCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+        <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">No Job Selected</h3>
+        <p className="text-gray-500 dark:text-gray-400">
+          Please select a job from the table above to view its results.
+        </p>
+      </div>
+    );
+  }
+
   if (loading) {
     return (
       <div className="bg-white dark:bg-gray-800 shadow sm:rounded-lg p-6">
@@ -182,7 +217,7 @@ export const ResultsTableData: React.FC = () => {
           </svg>
           <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-gray-100">No hotels found</h3>
           <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-            The results file is empty or contains no hotel data.
+            This job contains no results data.
           </p>
         </div>
       </div>
@@ -269,6 +304,16 @@ export const ResultsTableData: React.FC = () => {
                 <th
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
+                  onClick={() => requestSort('type')}
+                >
+                  <div className="flex items-center">
+                    Type
+                    <ArrowUpDown className="ml-1 h-4 w-4" />
+                  </div>
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer"
                   onClick={() => requestSort('phone')}
                 >
                   <div className="flex items-center">
@@ -298,13 +343,16 @@ export const ResultsTableData: React.FC = () => {
                     <div className="text-sm text-gray-500 dark:text-gray-400">{hotel.address}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.rating}</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.rating || 'N/A'}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.reviews}</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.reviews || 'N/A'}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.phone}</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100 capitalize">{hotel.type}</div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-900 dark:text-gray-100">{hotel.phone || 'N/A'}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {hotel.website ? (
@@ -325,7 +373,7 @@ export const ResultsTableData: React.FC = () => {
               ))}
               {sortedData.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                  <td colSpan={7} className="px-6 py-4 text-center text-sm text-gray-500 dark:text-gray-400">
                     No results found for your search
                   </td>
                 </tr>

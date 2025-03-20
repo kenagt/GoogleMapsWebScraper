@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ScrapingForm } from './components/ScrapingForm';
 import { ResultsTable } from './components/ResultsTable';
@@ -9,6 +9,8 @@ import ThemeToggle from './components/ThemeToggle';
 const queryClient = new QueryClient();
 
 function App() {
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
@@ -30,12 +32,14 @@ function App() {
               
               <div>
                 <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">Scraping Results</h2>
-                <ResultsTable />
+                <ResultsTable onJobSelect={setSelectedJobId} />
               </div>
 
               <div>
-                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">Scraping Results Data Table</h2>
-                <ResultsTableData />
+                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
+                  {selectedJobId ? `Results for Job: ${selectedJobId}` : 'Scraping Results Data Table'}
+                </h2>
+                <ResultsTableData jobId={selectedJobId} />
               </div>
             </div>
           </div>
