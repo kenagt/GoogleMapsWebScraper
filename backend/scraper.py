@@ -32,7 +32,9 @@ class GoogleMapsScraper:
             results.extend(self._scrape_type(location, radius, 'restaurants'))
         else:
             results.extend(self._scrape_type(location, radius, type_filter))
-            
+                    
+        self.write_to_json(results)   
+         
         return results
         
     def scrape_google_maps_urls(self):
@@ -172,8 +174,6 @@ class GoogleMapsScraper:
                 print(f"Error extracting item details: {e}")
                 print(f"An error occurred: {e.__traceback__.tb_lineno}")
                 continue
-            
-        self.write_to_json(results)
 
         return results
        

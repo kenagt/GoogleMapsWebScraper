@@ -1,14 +1,5 @@
 [
     {
-        "name": "Deluxe Nortel Hotel",
-        "address": "Maršala Tita 38, Sarajevo 71000",
-        "rating": "4,3",
-        "reviews": "54",
-        "type": "hotels",
-        "phone": "061 313 404",
-        "website": null
-    },
-    {
         "name": "APARTHOTEL CENTAR SARAJEVO",
         "address": "Muamera Omerbegovića 3, Sarajevo 71000",
         "rating": "4,3",
@@ -18,13 +9,13 @@
         "website": "https://www.booking.com/hotel/ba/quot-aparthotel-centar-quot-sarajevo.hr.html?label=gen173nr-1FCAEoggI46AdIM1gEaBKIAQGYARC4ARjIAQzYAQHoAQH4AQuIAgGoAgS4Aq7_kvoFwAIB0gIkOWFmYmEwNDEtNDM5MC00MDM1LWIzYzUtNGJiYmFhNDgzM2Zk2AIG4AIB;sid=570e17d4f48b94e42f3f5519a6749a76;dest_id=-94996;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A,A;sb_price_type=total;sr_order=popularity;srepoch=1598341052;srpvid=d9de359d6ac70022;type=total;ucfs=1&#hotelTmpl"
     },
     {
-        "name": "Hotel Grand Sarajevo",
-        "address": "Muhameda Ef. Pandže 7, Sarajevo 71000",
-        "rating": "3,8",
-        "reviews": "1.381",
+        "name": "Deluxe Nortel Hotel",
+        "address": "Maršala Tita 38, Sarajevo 71000",
+        "rating": "4,3",
+        "reviews": "54",
         "type": "hotels",
-        "phone": "033 563-100",
-        "website": "http://www.hotelgrand.com/"
+        "phone": "061 313 404",
+        "website": null
     },
     {
         "name": "Hotel VIP",
@@ -34,6 +25,15 @@
         "type": "hotels",
         "phone": "033 535-533",
         "website": null
+    },
+    {
+        "name": "Hotel Grand Sarajevo",
+        "address": "Muhameda Ef. Pandže 7, Sarajevo 71000",
+        "rating": "3,8",
+        "reviews": "1.381",
+        "type": "hotels",
+        "phone": "033 563-100",
+        "website": "http://www.hotelgrand.com/"
     },
     {
         "name": "Residence Inn",
@@ -63,19 +63,10 @@
         "website": null
     },
     {
-        "name": "Hotel Holiday",
-        "address": "Zmaja od Bosne 4, Sarajevo 71000",
-        "rating": 0,
-        "reviews": 0,
-        "type": "hotels",
-        "phone": "033 288-200",
-        "website": "http://www.hotelholiday.ba/"
-    },
-    {
         "name": "Hotel Hayat",
         "address": "Abdesthana 47, Sarajevo 71000",
-        "rating": 0,
-        "reviews": 0,
+        "rating": "3,4",
+        "reviews": "746",
         "type": "hotels",
         "phone": "061 448 707",
         "website": "https://hotel-hayat.ba/"
@@ -83,8 +74,8 @@
     {
         "name": "Residence Prime Luxury Sarajevo",
         "address": "71000, Ferhadija 8, Sarajevo 71000",
-        "rating": 0,
-        "reviews": 0,
+        "rating": "4,6",
+        "reviews": "65",
         "type": "hotels",
         "phone": "060 31 10 509",
         "website": "http://residenceprime.com/"
@@ -101,15 +92,6 @@
     {
         "name": "Hotel Cosmopolit",
         "address": "Radićeva 15, Sarajevo 71000",
-        "rating": 0,
-        "reviews": 0,
-        "type": "hotels",
-        "phone": "033 251-100",
-        "website": null
-    },
-    {
-        "name": "Hotel Cosmopolit",
-        "address": "Radićeva 15, Sarajevo 71000",
         "rating": "4,1",
         "reviews": "188",
         "type": "hotels",
@@ -117,10 +99,28 @@
         "website": null
     },
     {
+        "name": "Hotel Holiday",
+        "address": "Zmaja od Bosne 4, Sarajevo 71000",
+        "rating": "4,1",
+        "reviews": "3.596",
+        "type": "hotels",
+        "phone": "033 288-200",
+        "website": "http://www.hotelholiday.ba/"
+    },
+    {
+        "name": "Hotel Story",
+        "address": "Muvekita 4, Sarajevo 71000",
+        "rating": "4,5",
+        "reviews": "326",
+        "type": "hotels",
+        "phone": "033 551-555",
+        "website": "http://www.story-hotel.com/"
+    },
+    {
         "name": "Courtyard by Marriott",
         "address": "Skenderija 1, Sarajevo 71000",
-        "rating": 0,
-        "reviews": 0,
+        "rating": "4,6",
+        "reviews": "1.467",
         "type": "hotels",
         "phone": "033 954-500",
         "website": "https://www.marriott.com/en-us/hotels/sjjcy-courtyard-sarajevo/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
@@ -128,10 +128,145 @@
     {
         "name": "Hotel Begić",
         "address": "Abdesthana 4, Sarajevo 71000",
-        "rating": 0,
-        "reviews": 0,
+        "rating": "3,8",
+        "reviews": "62",
         "type": "hotels",
         "phone": "033 868-888",
         "website": null
+    },
+    {
+        "name": "Avlija",
+        "address": "Avde Sumbula 2, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "1.387",
+        "type": "restaurants",
+        "phone": "062 699 409",
+        "website": null
+    },
+    {
+        "name": "Ćevabdžinica Nune",
+        "address": "Ferhadija 12, Sarajevo 71000",
+        "rating": "4,8",
+        "reviews": "2.786",
+        "type": "restaurants",
+        "phone": "033 212-946",
+        "website": "https://nune.ba/"
+    },
+    {
+        "name": "Klopa",
+        "address": "Trg Fra Grge Martića 4, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "3.237",
+        "type": "restaurants",
+        "phone": "033 223-633",
+        "website": null
+    },
+    {
+        "name": "Restoran Amerikanac Sarajevo",
+        "address": "Branilaca Sarajeva 5, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "520",
+        "type": "restaurants",
+        "phone": "033 210-494",
+        "website": null
+    },
+    {
+        "name": "Dveri",
+        "address": "Prote Bakovića 12, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "2.134",
+        "type": "restaurants",
+        "phone": "033 537-020",
+        "website": "http://www.dveri.co.ba/"
+    },
+    {
+        "name": "4 sobe gospođe Safije",
+        "address": "Čekaluša 61, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "1.492",
+        "type": "restaurants",
+        "phone": "033 202-745",
+        "website": "http://restoransarajevo.com/"
+    },
+    {
+        "name": "Paper moon",
+        "address": "Hamdije Čemerlića 45, Sarajevo 71000",
+        "rating": "4,6",
+        "reviews": "1.300",
+        "type": "restaurants",
+        "phone": "033 956-939",
+        "website": "http://papermoon.ba/"
+    },
+    {
+        "name": "Besame Mucho",
+        "address": "Ćurčiluk mali 27, Sarajevo 71000",
+        "rating": "4,8",
+        "reviews": "251",
+        "type": "restaurants",
+        "phone": "062 339 713",
+        "website": null
+    },
+    {
+        "name": "Barba - Mediterranean Restaurant",
+        "address": "Dr. Fetaha Bećirbegovića 37A, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "379",
+        "type": "restaurants",
+        "phone": "062 650 450",
+        "website": "http://www.barba.ba/"
+    },
+    {
+        "name": "Mala Kuhinja",
+        "address": "Tina Ujevića 13, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "710",
+        "type": "restaurants",
+        "phone": "033 841-076",
+        "website": "http://www.malakuhinja.ba/"
+    },
+    {
+        "name": "Konoba Luka Sarajevo",
+        "address": "Obala Maka Dizdara 8, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "788",
+        "type": "restaurants",
+        "phone": "033 209-303",
+        "website": "https://www.facebook.com/Luka-Sarajevo-118187701699165/"
+    },
+    {
+        "name": "MORNAR SARAJEVO",
+        "address": "Radnička bb, Sarajevo 71000",
+        "rating": "4,8",
+        "reviews": "296",
+        "type": "restaurants",
+        "phone": "033 877-330",
+        "website": "http://www.mornar.ba/"
+    },
+    {
+        "name": "Konoba Fakat",
+        "address": "Bravadžiluk 23, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "353",
+        "type": "restaurants",
+        "phone": null,
+        "website": "http://www.facebook.com/KonobaFakat"
+    },
+    {
+        "name": "Restoran Sapori",
+        "address": "Restoran Sapori, Merhemića trg 9, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "82",
+        "type": "restaurants",
+        "phone": "033 877-700",
+        "website": null
+    },
+    {
+        "name": "Cakum-pakum",
+        "address": "Kaptol 10, Sarajevo 71000",
+        "rating": "4,7",
+        "reviews": "553",
+        "type": "restaurants",
+        "phone": "061 955 310",
+        "website": "https://www.facebook.com/restaurant.cakumpakum/"
     }
 ]
