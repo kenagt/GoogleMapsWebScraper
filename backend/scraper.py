@@ -110,7 +110,7 @@ class GoogleMapsScraper:
             self.driver.execute_script("arguments[0].scrollIntoView();", businesses[-1])
             time.sleep(3)
             
-            break
+            #break
 
             try:
                 # Check if new businesses are loaded

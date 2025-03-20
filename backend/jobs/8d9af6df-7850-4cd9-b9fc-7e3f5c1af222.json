@@ -1,0 +1,211 @@
+{
+    "id": "8d9af6df-7850-4cd9-b9fc-7e3f5c1af222",
+    "location": "hamze hume 4",
+    "radius": 3,
+    "type": "hotels",
+    "status": "completed",
+    "createdAt": "2025-03-20 17:30:25.903547+00:00",
+    "results": [
+        {
+            "name": "APARTHOTEL CENTAR SARAJEVO",
+            "address": "Muamera Omerbegovic\u0301a 3, Sarajevo 71000",
+            "rating": "4,3",
+            "reviews": "565",
+            "type": "hotels",
+            "phone": "061 484 493",
+            "website": "https://www.booking.com/hotel/ba/quot-aparthotel-centar-quot-sarajevo.hr.html?label=gen173nr-1FCAEoggI46AdIM1gEaBKIAQGYARC4ARjIAQzYAQHoAQH4AQuIAgGoAgS4Aq7_kvoFwAIB0gIkOWFmYmEwNDEtNDM5MC00MDM1LWIzYzUtNGJiYmFhNDgzM2Zk2AIG4AIB;sid=570e17d4f48b94e42f3f5519a6749a76;dest_id=-94996;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A,A;sb_price_type=total;sr_order=popularity;srepoch=1598341052;srpvid=d9de359d6ac70022;type=total;ucfs=1&#hotelTmpl",
+            "emails": "r@3x.png, ime@primjer.com, aparthotel.cs@gmail.com"
+        },
+        {
+            "name": "Hotel R",
+            "address": "Skenderija 4, Sarajevo 71000",
+            "rating": "4,4",
+            "reviews": "137",
+            "type": "hotels",
+            "phone": "033 555-155",
+            "website": "https://www.facebook.com/profile.php?id=61557688992122&mibextid=ZbWKwL",
+            "emails": ""
+        },
+        {
+            "name": "Deluxe Nortel Hotel",
+            "address": "Mars\u030cala Tita 38, Sarajevo 71000",
+            "rating": "4,3",
+            "reviews": "54",
+            "type": "hotels",
+            "phone": "061 313 404",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Colors Inn",
+            "address": "Kos\u030cevo 8, Sarajevo 71000",
+            "rating": "4,8",
+            "reviews": "634",
+            "type": "hotels",
+            "phone": "033 276-600",
+            "website": "https://www.hotelcolorsinnsarajevo.com/",
+            "emails": "info@colorsinnsarajevo.com"
+        },
+        {
+            "name": "Courtyard by Marriott",
+            "address": "Skenderija 1, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "1.467",
+            "type": "hotels",
+            "phone": "033 954-500",
+            "website": "https://www.marriott.com/en-us/hotels/sjjcy-courtyard-sarajevo/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+            "emails": ""
+        },
+        {
+            "name": "Pansion Fawlty Towers",
+            "address": "Skenderpas\u030cina 27, Sarajevo 71000",
+            "rating": "4,9",
+            "reviews": "47",
+            "type": "hotels",
+            "phone": "061 138 756",
+            "website": "https://www.booking.com/Share-oXQmzX",
+            "emails": "r@3x.png, ime@primjer.com, pansionfawlty@gmail.com"
+        },
+        {
+            "name": "Vila Alexandra",
+            "address": "Djoke Mazalica br 4, Sarajevo 71000",
+            "rating": "4,4",
+            "reviews": "57",
+            "type": "hotels",
+            "phone": "063 903 019",
+            "website": "http://www.vilaalexandra.ba/",
+            "emails": "info@vilaalexandra.ba"
+        },
+        {
+            "name": "Hotel Cosmopolit",
+            "address": "Radic\u0301eva 15, Sarajevo 71000",
+            "rating": "4,1",
+            "reviews": "188",
+            "type": "hotels",
+            "phone": "033 251-100",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Swiss\u00f4tel Sarajevo",
+            "address": "Vrbanja 1, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "2.417",
+            "type": "hotels",
+            "phone": "033 588-000",
+            "website": "https://www.swissotel.com/hotels/sarajevo/?goto=fiche_hotel&code_hotel=B1B7&merchantid=seo-maps-BA-B1B7&sourceid=aw-cen&utm_medium=seo+maps&utm_source=google+Maps&utm_campaign=seo+maps&y_source=1_MTIzNjEzODktNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl",
+            "emails": "info@swissotel-sarajevo.com, name@domain.com, johndoe@swissotels.com"
+        },
+        {
+            "name": "Ornament Hotel",
+            "address": "Obala Isa-bega Ishakovic\u0301a 1, Sarajevo 71000",
+            "rating": "4,8",
+            "reviews": "99",
+            "type": "hotels",
+            "phone": "061 096 190",
+            "website": "https://hotelornament.ba/hotel.html",
+            "emails": "contact@hotelornament.com"
+        },
+        {
+            "name": "Green Elite Residence",
+            "address": "Borak 23, Sarajevo 71000",
+            "rating": "4,2",
+            "reviews": "25",
+            "type": "hotels",
+            "phone": "061 894 380",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Royal Moon Suite",
+            "address": "C\u0301urc\u030ciluk mali 10, Sarajevo 71000",
+            "rating": "4,9",
+            "reviews": "47",
+            "type": "hotels",
+            "phone": "062 105 170",
+            "website": "https://www.royalmoonsuites.com/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Grand Sarajevo",
+            "address": "Muhameda Ef. Pandz\u030ce 7, Sarajevo 71000",
+            "rating": "3,8",
+            "reviews": "1.381",
+            "type": "hotels",
+            "phone": "033 563-100",
+            "website": "http://www.hotelgrand.com/",
+            "emails": "booking@hotelgrand.com, d.salihbegovic@hotelgrand.com"
+        },
+        {
+            "name": "Hotel Hecco Deluxe",
+            "address": "VC5C+FP5, Ferhadija 2, Sarajevo 71000",
+            "rating": "4,4",
+            "reviews": "913",
+            "type": "hotels",
+            "phone": "033 559-995",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Harmony",
+            "address": "Vrbaska 26G, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "388",
+            "type": "hotels",
+            "phone": "062 978 478",
+            "website": "https://villaharmony.ba/",
+            "emails": ""
+        },
+        {
+            "name": "Enes Durak",
+            "address": "Vrazova 24, Sarajevo 71000",
+            "rating": "4,3",
+            "reviews": "6",
+            "type": "hotels",
+            "phone": "063 694 930",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Orijent & apart hotel",
+            "address": "Kemal Begova 21, Sarajevo 71000",
+            "rating": "4,5",
+            "reviews": "140",
+            "type": "hotels",
+            "phone": "033 212-225",
+            "website": "https://www.orijent-sarajevo.com/",
+            "emails": "orijentsarajevo@gmail.com"
+        },
+        {
+            "name": "Residence Inn",
+            "address": "Skenderija 43, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "709",
+            "type": "hotels",
+            "phone": "033 563-600",
+            "website": "https://www.marriott.com/en-us/hotels/sjjri-residence-inn-sarajevo/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+            "emails": ""
+        },
+        {
+            "name": "Hotel \"Aziza\" Sarajevo",
+            "address": "Saburina 2, Sarajevo 71000",
+            "rating": "4,7",
+            "reviews": "614",
+            "type": "hotels",
+            "phone": "033 257-940",
+            "website": "http://hotelaziza.ba/",
+            "emails": "welcome@hotelaziza.ba"
+        },
+        {
+            "name": "Hotel Mod",
+            "address": "Hamdije Kres\u030cevljakovic\u0301a 48, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "127",
+            "type": "hotels",
+            "phone": "033 206-628",
+            "website": "http://www.hotel-mod.ba/",
+            "emails": ""
+        }
+    ],
+    "completedAt": "2025-03-20 17:31:39.355354+00:00"
+}
