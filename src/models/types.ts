@@ -19,8 +19,13 @@ export interface ScrapingResult {
   website?: string;
 }
 
+// types.ts
 export interface ScrapingRequest {
   location: string;
   radius: number;
   type: 'hotels' | 'restaurants' | 'both';
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
 }

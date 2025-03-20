@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { MapPin, Search, Loader2 } from 'lucide-react';
 import { useMutation, useQueryClient } from 'react-query';
 import { api } from '../api';
-import { ScrapingRequest } from '../types';
 
 export function ScrapingForm() {
   const [location, setLocation] = useState('');
