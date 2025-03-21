@@ -52,7 +52,7 @@ This application allows users to scrape business information from Google Maps wi
 ### Frontend Setup
 1. Navigate to the frontend directory
    ```
-   cd src
+   cd frontend
    ```
 
 2. Install Node.js dependencies
@@ -76,7 +76,7 @@ This application allows users to scrape business information from Google Maps wi
 
 2. In a new terminal, start the frontend development server
    ```
-   cd src
+   cd frontend
    npm run dev
    ```
 
