@@ -1,6 +1,6 @@
 from flask import request, jsonify
-from job_manager import JobManager
-from scraping_service import ScrapingService
+from scraping.job_manager import JobManager
+from services.scraping_service import ScrapingService
 import uuid
 from datetime import datetime, timezone
 

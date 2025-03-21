@@ -8,8 +8,8 @@ from selenium.common.exceptions import TimeoutException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from domain_explorer import DomainExplorer
-from email_output import EmailOutput
+from scraping.domain_explorer import DomainExplorer
+from scraping.email_output import EmailOutput
 import time
 import json
 import re

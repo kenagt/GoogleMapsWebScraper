@@ -1,6 +1,6 @@
 import threading
 from datetime import datetime, timezone
-from scraper import GoogleMapsScraper
+from scraping.scraper import GoogleMapsScraper
 
 class ScrapingService:
     def __init__(self, job_manager):
