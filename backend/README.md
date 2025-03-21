@@ -1,6 +1,6 @@
 # Google Maps Scraping Service
 
-This is a Flask-based backend service that scrapes Google Maps data using Selenium.
+This is a FastAPI-based backend service that scrapes Google Maps data using Selenium.
 
 ## Setup
 
