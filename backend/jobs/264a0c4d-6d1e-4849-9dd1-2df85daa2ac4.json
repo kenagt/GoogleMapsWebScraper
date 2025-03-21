@@ -1,0 +1,351 @@
+{
+    "id": "264a0c4d-6d1e-4849-9dd1-2df85daa2ac4",
+    "location": "Zenica",
+    "radius": 5,
+    "type": "hotels",
+    "status": "completed",
+    "createdAt": "2025-03-21 06:20:19.889085+00:00",
+    "results": [
+        {
+            "name": "Hotel Zenica",
+            "address": "Kamberovic\u0301a c\u030cikma bb, Zenica 72000",
+            "rating": "4,5",
+            "reviews": "1.200",
+            "type": "hotels",
+            "phone": "032 209-600",
+            "website": "http://www.hotelzenica.ba/",
+            "emails": "info@hotelzenica.ba"
+        },
+        {
+            "name": "Hotel Fontana",
+            "address": "Zacarina 17, Zenica 72000",
+            "rating": "4,6",
+            "reviews": "481",
+            "type": "hotels",
+            "phone": "032 462-999",
+            "website": "http://hotel-fontana.ba/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel BISS",
+            "address": "Vatrogasni put 1, Zenica 72000",
+            "rating": "4,6",
+            "reviews": "73",
+            "type": "hotels",
+            "phone": "032 979-713",
+            "website": "https://hotelbiss.ba/",
+            "emails": "info@hotelbiss.ba"
+        },
+        {
+            "name": "Carpe Diem",
+            "address": "S\u030ckolska bb, Zenica 72000",
+            "rating": "4,5",
+            "reviews": "1.723",
+            "type": "hotels",
+            "phone": "032 206-650",
+            "website": "http://carpediemzenica.ba/",
+            "emails": "info@carpediemzenica.ba"
+        },
+        {
+            "name": "City Code Hotel",
+            "address": "Sarajevska 1b, Zenica 72000",
+            "rating": "4,6",
+            "reviews": "194",
+            "type": "hotels",
+            "phone": "032 408-000",
+            "website": "http://www.citycodehotel.com/",
+            "emails": "info@citycodehotel.com"
+        },
+        {
+            "name": "Hotel Dubrovnik",
+            "address": "S\u030ckolska 10, Zenica 72000",
+            "rating": "4,6",
+            "reviews": "857",
+            "type": "hotels",
+            "phone": "032 202-700",
+            "website": "http://www.hoteldubrovnik.ba/",
+            "emails": "dubrovnik.hotel@gmail.com"
+        },
+        {
+            "name": "MOTEL ALMY",
+            "address": "Vranduc\u030cka bb, Zenica 72000",
+            "rating": "4,3",
+            "reviews": "1.112",
+            "type": "hotels",
+            "phone": "032 446-070",
+            "website": "https://motelalmy.ba/",
+            "emails": "info@almy.ba, motel@almy.ba"
+        },
+        {
+            "name": "Motel Rezime",
+            "address": "5WW4+8X8, S\u030ctrosmajerova, Zenica 72000",
+            "rating": "4,2",
+            "reviews": "95",
+            "type": "hotels",
+            "phone": "032 222-000",
+            "website": "http://motelrezime.ba/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Via",
+            "address": "Poslovna zona 96, Vitez 72250",
+            "rating": "4,5",
+            "reviews": "430",
+            "type": "hotels",
+            "phone": "030 718-460",
+            "website": "https://hotelvia.ba/",
+            "emails": "recepcija@hotelvia.ba"
+        },
+        {
+            "name": "Motel Richi",
+            "address": "Prof. Juraja Neidhardta 15, Zenica 72000",
+            "rating": "4,5",
+            "reviews": "192",
+            "type": "hotels",
+            "phone": null,
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Avanti",
+            "address": "Prve zenic\u030cke brigade 116, Zenica 72000",
+            "rating": "4,5",
+            "reviews": "98",
+            "type": "hotels",
+            "phone": "061 186 373",
+            "website": "https://olx.ba/artikal/8246119",
+            "emails": ""
+        },
+        {
+            "name": "Hostel T&M",
+            "address": "Fra Grge Martic\u0301a, Zenica 72000",
+            "rating": "3,9",
+            "reviews": "165",
+            "type": "hotels",
+            "phone": "032 245-300",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Kakanj",
+            "address": "Alije Izetbegovic\u0301a bb, Kakanj 72240",
+            "rating": "4,5",
+            "reviews": "819",
+            "type": "hotels",
+            "phone": "032 552-880",
+            "website": "http://www.hotelkakanj.ba/",
+            "emails": "info@hotelkakanj.ba"
+        },
+        {
+            "name": "JU \"Penzionerski dom sa stacionarom\" Zeni\u010dko-dobojskog kantona - Hotel Dom penzionera",
+            "address": "Prve zenic\u030cke brigade 10, Zenica 72000",
+            "rating": "4,1",
+            "reviews": "292",
+            "type": "hotels",
+            "phone": "032 425-505",
+            "website": "http://www.pdzdk.com/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel IUT",
+            "address": "Aleja Konzula bb, Travnik 72270",
+            "rating": "4,7",
+            "reviews": "175",
+            "type": "hotels",
+            "phone": "030 509-300",
+            "website": "https://iuthotel.com/",
+            "emails": "info@iuthotel.com"
+        },
+        {
+            "name": "Hotel IN \u017dep\u010de",
+            "address": "Ravne Donje 72230",
+            "rating": "4,5",
+            "reviews": "508",
+            "type": "hotels",
+            "phone": "032 889-083",
+            "website": "https://www.hotelinzepce.com/",
+            "emails": "hotelinzepce@gmail.com"
+        },
+        {
+            "name": "Hotel Residence",
+            "address": "Polje Slavka Gavranc\u030cic\u0301a bb, Travnik 72270",
+            "rating": "4,8",
+            "reviews": "49",
+            "type": "hotels",
+            "phone": "061 104 556",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hostel Imran",
+            "address": "Bilmis\u030cc\u0301e 86a, Zenica 72000",
+            "rating": "4,0",
+            "reviews": "197",
+            "type": "hotels",
+            "phone": "061 452 026",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Studio Apartman ZENICA",
+            "address": "Dobrovoljnih davalaca krvi 6, Zenica 72000",
+            "rating": "5,0",
+            "reviews": "13",
+            "type": "hotels",
+            "phone": "062 113 881",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Stari grad Fojnica",
+            "address": "ZAVNOBIH-a, Fojnica 71270",
+            "rating": "4,6",
+            "reviews": "53",
+            "type": "hotels",
+            "phone": null,
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Studio Apartman ZENICA",
+            "address": "Dobrovoljnih davalaca krvi 6, Zenica 72000",
+            "rating": "5,0",
+            "reviews": "13",
+            "type": "hotels",
+            "phone": "062 113 881",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel BM International",
+            "address": "Pijac\u030cna 2, Sarajevo 71000",
+            "rating": "3,8",
+            "reviews": "905",
+            "type": "hotels",
+            "phone": "033 774-630",
+            "website": "https://bminternationalhotel.inn.fan/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Exclusive",
+            "address": "Safeta Zajke 420, Sarajevo 71000",
+            "rating": "3,9",
+            "reviews": "609",
+            "type": "hotels",
+            "phone": "033 580-000",
+            "website": "http://www.hotel-exclusive.ba/",
+            "emails": "info@hoteldemo.com, info@hotel-exclusive.ba"
+        },
+        {
+            "name": "Hotel Jezero",
+            "address": "Patriotske lige bb, Sarajevo 71000",
+            "rating": "4,2",
+            "reviews": "47",
+            "type": "hotels",
+            "phone": "062 957 212",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Sokak",
+            "address": "Mula Mustafe Bas\u030ceskije 24, Sarajevo 71000",
+            "rating": "4,3",
+            "reviews": "198",
+            "type": "hotels",
+            "phone": "033 570-355",
+            "website": "https://hotel-sokak.ba/?page_id=53",
+            "emails": "info@hotel-sokak.ba"
+        },
+        {
+            "name": "Hotel Family Sarajevo",
+            "address": "Dejzina Bikic\u0301a 139a, Sarajevo 71000",
+            "rating": "4,8",
+            "reviews": "274",
+            "type": "hotels",
+            "phone": "061 664 499",
+            "website": "http://hotelfamily.ba/",
+            "emails": "info@hotelfamily.ba"
+        },
+        {
+            "name": "Hotel Hercegovina",
+            "address": "R8G4+9PG, Banjska, Ilidz\u030ca 71000",
+            "rating": "4,0",
+            "reviews": "128",
+            "type": "hotels",
+            "phone": "033 772-070",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Apeiro City Avant-garde Hotel",
+            "address": "Hadz\u030ciristic\u0301a 1, Sarajevo 71000",
+            "rating": "5,0",
+            "reviews": "7",
+            "type": "hotels",
+            "phone": "033 202-555",
+            "website": "https://apeirohotels.com/",
+            "emails": ""
+        },
+        {
+            "name": "Hotel Premium - Restoran Lipa",
+            "address": "43FX+VJR, Kakanj",
+            "rating": "3,3",
+            "reviews": "3",
+            "type": "hotels",
+            "phone": "062 840 820",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Central Wellness&Spa Vla\u0161i\u0107",
+            "address": "Travnik Babanovac, Travnik 72286",
+            "rating": "4,5",
+            "reviews": "366",
+            "type": "hotels",
+            "phone": "062 818 412",
+            "website": "http://www.hotelcentralvlasic.com/",
+            "emails": "info@hotelcentralvlasic.com"
+        },
+        {
+            "name": "Hotel D\u017eale",
+            "address": "Muhas\u030cinovic\u0301i, Visoko 71300",
+            "rating": "3,7",
+            "reviews": "74",
+            "type": "hotels",
+            "phone": "032 742-111",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Hotel Vienna",
+            "address": "WHRM+885, Vrbaska, Gornji Vakuf-Uskoplje",
+            "rating": "3,1",
+            "reviews": "24",
+            "type": "hotels",
+            "phone": "030 494-880",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "HOTEL BEJTURAN",
+            "address": "Adz\u030cemovic\u0301a 27, Sarajevo 71000",
+            "rating": "4,6",
+            "reviews": "133",
+            "type": "hotels",
+            "phone": "061 224 848",
+            "website": null,
+            "emails": ""
+        },
+        {
+            "name": "Zoomlex Hotel",
+            "address": "Vrbanja 1, Sarajevo 71000",
+            "rating": 0,
+            "reviews": 0,
+            "type": "hotels",
+            "phone": "061 555 194",
+            "website": null,
+            "emails": ""
+        }
+    ],
+    "completedAt": "2025-03-21 06:22:50.570177+00:00"
+}
