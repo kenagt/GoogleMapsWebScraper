@@ -39,10 +39,21 @@ const ResultDetailView: React.FC<HotelDetailViewProps> = ({ hotel, onClose }) =>
   };
   
   const emailsList = formatEmails(hotel.emails);
+  
+  // Handle clicks on the modal container to prevent them from closing the modal
+  const handleModalClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      onClick={onClose} // Add onClick handler to the overlay
+    >
+      <div 
+        className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        onClick={handleModalClick} // Prevent clicks on the modal from closing it
+      >
         <div className="flex justify-between items-center p-6 border-b dark:border-gray-700">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-white">{hotel.name}</h2>
           <button 
@@ -53,8 +64,10 @@ const ResultDetailView: React.FC<HotelDetailViewProps> = ({ hotel, onClose }) =>
           </button>
         </div>
         
+        {/* Rest of your modal content remains unchanged */}
         <div className="p-6">
           <div className="grid md:grid-cols-2 gap-6">
+            {/* All the content remains the same */}
             <div>
               <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Address</h3>
               <p className="text-gray-900 dark:text-gray-200">{hotel.address}</p>
