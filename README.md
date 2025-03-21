@@ -142,8 +142,8 @@ Each job displays one of the following statuses:
 
 ## Running app
 
-![Screenshot](screenshots/Screenshot 2025-03-21 072006.png)
-![Screenshot](screenshots/Screenshot 2025-03-21 072027.png)
-![Screenshot](screenshots/Screenshot 2025-03-21 072045.png)
-![Screenshot](screenshots/Screenshot 2025-03-21 072105.png)
-![Screenshot](screenshots/Screenshot 2025-03-21 072125.png)
+![Screenshot](screenshots/1.png)
+![Screenshot](screenshots/2.png)
+![Screenshot](screenshots/3.png)
+![Screenshot](screenshots/4.png)
+![Screenshot](screenshots/5.png)
